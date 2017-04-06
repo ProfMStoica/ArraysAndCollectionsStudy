@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ArraysAndCollectionsStudy
 {
+    /// <summary>
+    /// Study program that allows debugging and experiementing with single, multi-dimensional and jagged arrays
+    /// as well as collections such as dynamic arrays (List objects) and dictionaries
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -14,6 +18,7 @@ namespace ArraysAndCollectionsStudy
             {
                 Program prog = new Program();
                 prog.CompareArraysWithLists();
+                prog.CreateBaseHoroscope();
             }
             catch (Exception ex)
             {
@@ -23,6 +28,10 @@ namespace ArraysAndCollectionsStudy
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Analyze the differences between static arrays and dynamic arrays (list objects) in terms of properties
+        /// and how elements are created, accessed and used
+        /// </summary>        
         private void CompareArraysWithLists()
         {
             List<string> predList = new List<string>(10);
@@ -56,6 +65,25 @@ namespace ArraysAndCollectionsStudy
             {
                 Console.WriteLine(e.Message);
             }
+        }
+
+        /// <summary>
+        /// Experiment with single-dimensional arrays using the base Horoscope class which encapsulates the array
+        /// of signs and test data used to generate predictions, all implemented as single dimensional static arrays
+        /// </summary>
+        private void CreateBaseHoroscope()
+        {
+            Console.WriteLine("\n=============== Basic Horoscope Begins ===============");
+            Console.WriteLine("Press any key to give the basic horoscope a try");
+            Console.ReadKey();
+            
+            //Investigate the creation of single dimensional arrays and how they get filled with data
+            Horoscope baseHoroscope = new Horoscope();
+
+            //Investigate how single dimensional arrays are enumerated / iterated through.
+            baseHoroscope.EnumerateElements();
+
+            Console.WriteLine("=============== Basic Horoscope Ends ===============\n");
         }
 
     }
