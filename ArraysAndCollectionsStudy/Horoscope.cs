@@ -37,13 +37,24 @@ namespace ArraysAndCollectionsStudy
             {
                 Console.WriteLine(signName);
             }
-        }        
+        }     
 
         public static string GeneratePrediction()
         {
             int iAction = s_randomizer.Next(s_actions.Length);
             int iThing = s_randomizer.Next(s_things.Length);
             return String.Format("{0} a(n) {1}.", s_actions[iAction], s_things[iThing]);
+        }
+
+        /// <summary>
+        /// Indexer that allows access for get and set to elements inside the zodiac sign array
+        /// </summary>
+        /// <param name="iSign"></param>
+        /// <returns></returns>
+        public string this[int iSign]
+        {
+            get { return _zodiacSignArray[iSign]; }
+            set { _zodiacSignArray[iSign] = value; }
         }
     }
 }

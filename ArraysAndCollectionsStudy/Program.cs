@@ -83,6 +83,22 @@ namespace ArraysAndCollectionsStudy
             //Investigate how single dimensional arrays are enumerated / iterated through.
             baseHoroscope.EnumerateElements();
 
+            //Investigate how to access elements from a composite object (an object with a collection of elements 
+            //inside using an indexer
+            string firstSign = baseHoroscope[0];
+            Console.WriteLine("The first sign of the zodiac is {0}", firstSign);
+
+            Console.WriteLine("What is the sign you are looking for (enter an integer 1 to 12)?");
+            int signNumber = int.Parse(Console.ReadLine());
+
+            //use the indexer to get an element 
+            string userSign = baseHoroscope[signNumber - 1];
+            Console.WriteLine(userSign);
+
+            //change an element using the indexer method
+            baseHoroscope[0] = firstSign.ToUpper();
+            Console.WriteLine("The first sign of the zodiac is now {0}", baseHoroscope[0]);
+
             Console.WriteLine("=============== Basic Horoscope Ends ===============\n");
         }
 
