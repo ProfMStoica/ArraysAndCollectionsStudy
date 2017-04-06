@@ -19,6 +19,7 @@ namespace ArraysAndCollectionsStudy
                 Program prog = new Program();
                 prog.CompareArraysWithLists();
                 prog.CreateBaseHoroscope();
+                prog.CreateTwoDimensionalHoroscope();
             }
             catch (Exception ex)
             {
@@ -100,6 +101,26 @@ namespace ArraysAndCollectionsStudy
             Console.WriteLine("The first sign of the zodiac is now {0}", baseHoroscope[0]);
 
             Console.WriteLine("=============== Basic Horoscope Ends ===============\n");
+        }
+
+        /// <summary>
+        /// Exeperiment with multi-dimensional arrays. The HoroscopeTwoDim class used a multi-dimensional array with
+        /// two dimensions to store horoscope predictions organized by zodic sign
+        /// </summary>
+        private void CreateTwoDimensionalHoroscope()
+        {
+            Console.WriteLine("\n=============== Two Dimensional Horoscope Begins ===============");
+            Console.WriteLine("Press any key to give the two dimensional horoscope a try");
+            Console.ReadKey();
+
+            //use a multi-dimensional horoscope which has a multi-dimensional list of predictions and is derived from horoscope
+            //Investigate the creation of multi-dimensional arrays and how they get filled with data
+            HoroscopeTwoDim hTwoDim = new HoroscopeTwoDim();
+
+            //Investigate how multi-dimensional arrays are enumerated / iterated through.
+            hTwoDim.EnumerateElements();
+
+            Console.WriteLine("=============== Two Dimensional Horoscope Ends ===============\n");
         }
 
     }

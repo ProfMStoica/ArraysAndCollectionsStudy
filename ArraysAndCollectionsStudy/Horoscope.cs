@@ -20,6 +20,9 @@ namespace ArraysAndCollectionsStudy
         protected static string[] s_things = { "job", "car", "cold", "prize", "lottery ticket", "game", "book", "knowledge", "bus", "drink" };
         protected static Random s_randomizer = new Random();
 
+        /// <summary>
+        /// Investigate how single dimensional arrays are created and initialized and what their properties are
+        /// </summary>
         public Horoscope()
         {
             //create and initialize the array of signs in the same time
