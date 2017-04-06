@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ArraysAndCollectionsStudy
 {
+    /// <summary>
+    /// Base class for different implementations of Horoscopes using different types of data structures such
+    /// as multi-dimesional arrays, jagged arrays, dictionaries, lists of objects.
+    /// </summary>
     class Horoscope
     {
         //single-dimensional array of string objects to store the zodiac sign names
@@ -29,6 +33,9 @@ namespace ArraysAndCollectionsStudy
             Console.WriteLine("_zodiacSignArray.Rank = {0}", _zodiacSignArray.Rank);
         }
 
+        /// <summary>
+        /// Enumerate (iterate through) all the elements of an array
+        /// </summary>
         public virtual void EnumerateElements()
         {
             //print the zodiac sign names
@@ -39,10 +46,17 @@ namespace ArraysAndCollectionsStudy
             }
         }     
 
+        /// <summary>
+        /// Helper method used to generate predictions which are used to initialize the array of predictions
+        /// for all the zodiac signs. The method is used in derived classes.
+        /// </summary>
+        /// <returns></returns>
         public static string GeneratePrediction()
         {
             int iAction = s_randomizer.Next(s_actions.Length);
             int iThing = s_randomizer.Next(s_things.Length);
+
+            //access random elements by index. This is the operation static arrays are optimized for
             return String.Format("{0} a(n) {1}.", s_actions[iAction], s_things[iThing]);
         }
 
