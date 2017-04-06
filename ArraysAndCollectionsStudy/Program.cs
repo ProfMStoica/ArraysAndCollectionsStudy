@@ -120,6 +120,29 @@ namespace ArraysAndCollectionsStudy
             //Investigate how multi-dimensional arrays are enumerated / iterated through.
             hTwoDim.EnumerateElements();
 
+            //Investigate how to access elements from a composite object (an object with a collection of elements) 
+            //inside using an indexer when the collection of elements inside the object multi-dimensional
+            string firstPred = hTwoDim[0, 0];
+            Console.WriteLine("The first prediction in the zodiac is {0}.", firstPred);
+
+            Console.WriteLine("What is the sign you are looking for (enter an integer 1 to 12)?");
+            int signNumber = int.Parse(Console.ReadLine());
+
+            //use the indexer to get an element 
+            string userSign = hTwoDim[signNumber - 1]; //this indexer is inherited from the base class
+            Console.WriteLine(userSign);
+
+            Console.WriteLine("Choose a random number between 0 and 9 for your prediction:");
+            int randPredIndex = int.Parse(Console.ReadLine());
+
+            //use the indexer to get an element 
+            string userPrediction = hTwoDim[signNumber - 1, randPredIndex];
+            Console.WriteLine($"The {randPredIndex} prediction of {userSign} is {userPrediction}");
+
+            //change an element using the indexer method
+            hTwoDim[0, 0] = "Get a great summer job";
+            Console.WriteLine("The first prediction in the zodiac is {0}.", hTwoDim[0, 0]);
+
             Console.WriteLine("=============== Two Dimensional Horoscope Ends ===============\n");
         }
 

@@ -68,5 +68,17 @@ namespace ArraysAndCollectionsStudy
                 }
             }
         }
+
+        /// <summary>
+        /// Indexer with two parameters that allows access to the prediction witha given index from a given zodiac sign
+        /// </summary>
+        /// <param name="sign"></param>
+        /// <param name="pred"></param>
+        /// <returns></returns>
+        public string this[int sign, int pred]
+        {
+            get { return _multiDimPredArray[sign, pred]; }
+            set { _multiDimPredArray[sign, pred] = value; }
+        }
     }
 }
