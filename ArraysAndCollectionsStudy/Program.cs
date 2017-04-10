@@ -20,6 +20,7 @@ namespace ArraysAndCollectionsStudy
                 prog.CompareArraysWithLists();
                 prog.CreateBaseHoroscope();
                 prog.CreateTwoDimensionalHoroscope();
+                prog.CreateJaggedHoroscope();
             }
             catch (Exception ex)
             {
@@ -137,13 +138,33 @@ namespace ArraysAndCollectionsStudy
 
             //use the indexer to get an element 
             string userPrediction = hTwoDim[signNumber - 1, randPredIndex];
-            Console.WriteLine($"The {randPredIndex} prediction of {userSign} is {userPrediction}");
+            Console.WriteLine($"The prediction {randPredIndex} in {userSign} is {userPrediction}");
 
             //change an element using the indexer method
             hTwoDim[0, 0] = "Get a great summer job";
             Console.WriteLine("The first prediction in the zodiac is {0}.", hTwoDim[0, 0]);
 
             Console.WriteLine("=============== Two Dimensional Horoscope Ends ===============\n");
+        }
+
+        /// <summary>
+        /// Exeperiment with jagged arrays. Compare and contrast with multi-dimensional arrays. The HoroscopeTwoDim class used a 
+        /// multi-dimensional array with two dimensions to store horoscope predictions organized by zodic sign
+        /// </summary>
+        private void CreateJaggedHoroscope()
+        {
+            Console.WriteLine("\n=============== Jagged Horoscope Begins ===============");
+            Console.WriteLine("Press any key to give the jagged horoscope a try");
+            Console.ReadKey();
+
+            //use a multi-dimensional horoscope which has a multi-dimensional list of predictions and is derived from horoscope
+            //Investigate the creation of jagged arrays and how they get filled with data
+            HoroscopeJagged hJagged = new HoroscopeJagged();
+
+            //Investigate how jagged arrays are enumerated / iterated through.
+            hJagged.EnumerateElements();
+
+            Console.WriteLine("=============== Jagged Horoscope Ends ===============\n");
         }
 
     }
