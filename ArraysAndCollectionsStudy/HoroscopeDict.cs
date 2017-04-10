@@ -13,7 +13,7 @@ namespace ArraysAndCollectionsStudy
     class HoroscopeDict : Horoscope
     {
         //dictionary of string (sign name) to list of strings (predictions) to store the predictions of a horoscope and
-        //be searchable by sign name (e.g. What is the list of predictions for "aries"?
+        //is searchable by sign name (e.g. What is the list of predictions for "aries"?
         private Dictionary<string, List<string>> _predDict;
 
         /// <summary>
