@@ -68,7 +68,16 @@ namespace ArraysAndCollectionsStudy
             return ((IEnumerable<string>)_predList).GetEnumerator();
         }
 
-        
+        /// <summary>
+        /// Indexer that allows access for get and set to elements inside the zodiac sign, the predictions
+        /// </summary>
+        /// <param name="iSign"></param>
+        /// <returns></returns>
+        public string this[int iSign]
+        {
+            get { return _predList[iSign]; }
+            set { _predList[iSign] = value; }
+        }
 
     }
 }

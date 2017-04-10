@@ -83,6 +83,16 @@ namespace ArraysAndCollectionsStudy
             }
 
         }
-        
+        /// <summary>
+        /// Indexer with two parameters that allows access to a given 
+        /// </summary>
+        /// <param name="sign"></param>
+        /// <param name="pred"></param>
+        /// <returns></returns>
+        public string this[string sign, int pred]
+        {
+            get { return _zodiacSignDict[sign.ToLower()][pred]; }
+            set { _zodiacSignDict[sign.ToLower()][pred] = value; }
+        }
     }
 }

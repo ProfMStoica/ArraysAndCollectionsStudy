@@ -249,6 +249,24 @@ namespace ArraysAndCollectionsStudy
             //Investigate how elements of a composite object are enumerated / iterated through.
             hOOP.EnumerateElements();
 
+            //Investigate how to access elements from a composite object (an object with a collection of elements) 
+            //inside using an indexer when the collection of elements inside the object is a dictionary
+            string firstPred = hOOP["aries", 0];
+            Console.WriteLine("The first prediction in the zodiac is {0}. Changing...", firstPred);
+
+            Console.WriteLine("What is the sign you are looking for (e.g. aries)?");
+            string userSign = Console.ReadLine();
+            Console.WriteLine("Choose a random number between 0 and 100 for your prediction:");
+            int randPredIndex = int.Parse(Console.ReadLine());
+
+            //use the indexer to get an element 
+            string userPrediction = hOOP[userSign.ToLower(), randPredIndex];
+            Console.WriteLine($"The prediction {randPredIndex} in {userSign} is {userPrediction}");
+
+            //change an element using the indexer method
+            hOOP["aries", 0] = "Get a great summer job";
+            Console.WriteLine("The first prediction in the zodiac is {0}", hOOP["aries", 0]);
+
             Console.WriteLine("=============== OOP Horoscope Ends ===============\n");
         }
     }
