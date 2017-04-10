@@ -21,6 +21,7 @@ namespace ArraysAndCollectionsStudy
                 prog.CreateBaseHoroscope();
                 prog.CreateTwoDimensionalHoroscope();
                 prog.CreateJaggedHoroscope();
+                prog.CreateDictionaryHoroscope();
             }
             catch (Exception ex)
             {
@@ -190,5 +191,20 @@ namespace ArraysAndCollectionsStudy
             Console.WriteLine("=============== Jagged Horoscope Ends ===============\n");
         }
 
+        private void CreateDictionaryHoroscope()
+        {
+            Console.WriteLine("\n=============== Dictionary Horoscope Begins ===============");
+            Console.WriteLine("Press any key to give the dictionary horoscope a try");
+            Console.ReadKey();
+
+            //use a multi-dimensional horoscope which has a multi-dimensional list of predictions and is derived from horoscope
+            //Investigate the creation of dictionary collections and how they get filled with data
+            HoroscopeDict hDict = new HoroscopeDict();
+
+            //Investigate how jagged arrays are enumerated / iterated through.
+            hDict.EnumerateElements();
+
+            Console.WriteLine("=============== Dictionary Horoscope Ends ===============\n");
+        }
     }
 }
