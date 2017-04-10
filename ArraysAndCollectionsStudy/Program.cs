@@ -22,6 +22,7 @@ namespace ArraysAndCollectionsStudy
                 prog.CreateTwoDimensionalHoroscope();
                 prog.CreateJaggedHoroscope();
                 prog.CreateDictionaryHoroscope();
+                prog.CreateOOPHoroscope();
             }
             catch (Exception ex)
             {
@@ -106,7 +107,7 @@ namespace ArraysAndCollectionsStudy
         }
 
         /// <summary>
-        /// Exeperiment with multi-dimensional arrays. The HoroscopeTwoDim class used a multi-dimensional array with
+        /// Exeperiment with multi-dimensional arrays. The HoroscopeTwoDim class uses a multi-dimensional array with
         /// two dimensions to store horoscope predictions organized by zodic sign
         /// </summary>
         private void CreateTwoDimensionalHoroscope()
@@ -149,7 +150,7 @@ namespace ArraysAndCollectionsStudy
         }
 
         /// <summary>
-        /// Exeperiment with jagged arrays. Compare and contrast with multi-dimensional arrays. The HoroscopeTwoDim class used a 
+        /// Exeperiment with jagged arrays. Compare and contrast with multi-dimensional arrays. The HoroscopeJagged class uses a 
         /// multi-dimensional array with two dimensions to store horoscope predictions organized by zodic sign
         /// </summary>
         private void CreateJaggedHoroscope()
@@ -191,6 +192,11 @@ namespace ArraysAndCollectionsStudy
             Console.WriteLine("=============== Jagged Horoscope Ends ===============\n");
         }
 
+        /// <summary>
+        /// Experiment with collections, dictionary and lists. Compare and contrast with the use of jagged and multi-dimensional arrays. 
+        /// The HoroscopeDict class uses a dictionary that associates zodiac sign names with lists of predictions, achieving  
+        /// the same organization of predictions by zodiac sign
+        /// </summary>
         private void CreateDictionaryHoroscope()
         {
             Console.WriteLine("\n=============== Dictionary Horoscope Begins ===============");
@@ -223,6 +229,27 @@ namespace ArraysAndCollectionsStudy
             Console.WriteLine("The first prediction in the zodiac is {0}", hDict["aries", 0]);
 
             Console.WriteLine("=============== Dictionary Horoscope Ends ===============\n");
+        }
+
+        /// <summary>
+        /// Experiment with using object-oriented design for organizing data and achieving a multi-dimensional organization.
+        /// When data is encapsulated as different objects of different classes, this organization is obtain naturally as
+        /// objects are made of collections of other objects who can in turn made be made of collections of other objects.
+        /// An object-oriented organization of the data has many advantages.
+        /// </summary>
+        private void CreateOOPHoroscope()
+        {
+            Console.WriteLine("\n=============== OOP Horoscope Begins ===============");
+            Console.WriteLine("Press any key to give the dictionary horoscope a try");
+            Console.ReadKey();
+
+            //Investigate how a composite object (made of a list of other objects) is created and initialized
+            HoroscopeOOP hOOP = new HoroscopeOOP();
+
+            //Investigate how elements of a composite object are enumerated / iterated through.
+            hOOP.EnumerateElements();
+
+            Console.WriteLine("=============== OOP Horoscope Ends ===============\n");
         }
     }
 }

@@ -45,6 +45,8 @@
     <Compile Include="Horoscope.cs" />
     <Compile Include="HoroscopeDict.cs" />
     <Compile Include="HoroscopeJagged.cs" />
+    <Compile Include="HoroscopeOOP\HoroscopeOOP.cs" />
+    <Compile Include="HoroscopeOOP\ZodiacSign.cs" />
     <Compile Include="HoroscopeTwoDim.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
