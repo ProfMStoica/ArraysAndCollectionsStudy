@@ -87,6 +87,18 @@ namespace ArraysAndCollectionsStudy
             }
 
         }
-       
+
+        /// <summary>
+        /// Indexer with two parameters that allows access to a given. In this case the indexer
+        /// does just use integers as parameters and can match the type of key used in the dictionary
+        /// </summary>
+        /// <param name="sign"></param>
+        /// <param name="pred"></param>
+        /// <returns></returns>
+        public string this[string sign, int pred]
+        {
+            get { return _predDict[sign.ToLower()][pred]; }
+            set { _predDict[sign.ToLower()][pred] = value; }
+        }
     }
 }

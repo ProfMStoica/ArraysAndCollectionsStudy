@@ -204,6 +204,24 @@ namespace ArraysAndCollectionsStudy
             //Investigate how jagged arrays are enumerated / iterated through.
             hDict.EnumerateElements();
 
+            //Investigate how to access elements from a composite object (an object with a collection of elements) 
+            //inside using an indexer when the collection of elements inside the object is a dictionary
+            string firstPred = hDict["aries", 0];
+            Console.WriteLine("The first prediction in the zodiac is {0}.", firstPred);
+
+            Console.WriteLine("What is the sign you are looking for (e.g. aries)?");
+            string userSign = Console.ReadLine(); //note how the user can use the name of the sign instead of having to know the index
+            Console.WriteLine("Choose a random number between 0 and 100 for your prediction:");
+            int randPredIndex = int.Parse(Console.ReadLine());
+
+            //use the indexer to get an element 
+            string userPrediction = hDict[userSign.ToLower(), randPredIndex];
+            Console.WriteLine($"The prediction {randPredIndex} in {userSign} is {userPrediction}");
+
+            //change an element using the indexer method
+            hDict["aries", 0] = "Get a great summer job";
+            Console.WriteLine("The first prediction in the zodiac is {0}", hDict["aries", 0]);
+
             Console.WriteLine("=============== Dictionary Horoscope Ends ===============\n");
         }
     }
