@@ -91,7 +91,19 @@ namespace ArraysAndCollectionsStudy
             }
         }
 
-       
+        /// <summary>
+        /// Indexer with two parameters that allows access to the prediction witha given index from a given zodiac sign.
+        /// Note how the indexer hides the implementation detail of what kind of internal array is used, multi-dimensional
+        /// or jagged
+        /// </summary>
+        /// <param name="sign"></param>
+        /// <param name="pred"></param>
+        /// <returns></returns>
+        public string this[int sign, int pred]
+        {
+            get { return _jagPredArray[sign][pred]; }
+            set { _jagPredArray[sign][pred] = value; }
+        }
 
     }
 }
