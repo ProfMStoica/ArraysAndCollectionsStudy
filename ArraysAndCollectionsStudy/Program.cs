@@ -34,7 +34,7 @@ namespace ArraysAndCollectionsStudy
 
         /// <summary>
         /// Analyze the differences between static arrays and dynamic arrays (list objects) in terms of properties
-        /// and how elements are created, accessed and used
+        /// and how elements are created, accessed and used 
         /// </summary>        
         private void CompareArraysWithLists()
         {
