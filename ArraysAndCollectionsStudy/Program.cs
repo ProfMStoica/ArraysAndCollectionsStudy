@@ -26,7 +26,7 @@ namespace ArraysAndCollectionsStudy
             }
             catch (Exception ex)
             {
-                Console.WriteLine("TODO: Error handling has not beein built-in. You will have to start again.");
+                Console.WriteLine("TODO: Error handling has not beein built-in. You will have to start the program again.");
             }
 
             Console.ReadKey();
